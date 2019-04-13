@@ -1,11 +1,16 @@
 <template>
   <div id="app">
-    <material-input-field v-model="text"/>
+    <material-input-field v-model="text" :size="txtSize"/>
     <br/>
-    <input-atom v-model="text" :size="txtSize"/>
-    <!-- <material-input v-model="text"/> -->
+    <input-atom v-model="text"/>
+    <br>
+    <material-input v-model="text"/>
     <br/>
     <v-text>{{ text }}</v-text>
+    <br/>
+    <div v-for="(item, k) of (new Array(6))" :key="k">
+      <v-text :el="'h' + (k + 1)">{{text}}</v-text>
+    </div>
   </div>
 </template>
 
@@ -26,7 +31,7 @@ export default {
   data () {
     return {
       txtSize: 1,
-      text: 'asdasd'
+      text: 'Atomic Design'
     }
   }
 }

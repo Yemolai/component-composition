@@ -4,6 +4,16 @@
 <script>
 export default {
     name: 'InputAtom',
+    props: {
+        value: {
+            type: String,
+            default: ''
+        },
+        size: {
+            type: Number,
+            default: 1
+        }
+    },
     computed: {
         __value: {
             get () {
@@ -23,6 +33,7 @@ input {
     box-shadow: 1px 2px 5px 0.8px rgba(22, 22, 22, 0.2);
     border-radius: 3px;
     padding: 10px;
+    min-width: 10em;
     color: rgb(44, 44, 44);
     font-size: 1.25em;
     line-height: 1.2em;
