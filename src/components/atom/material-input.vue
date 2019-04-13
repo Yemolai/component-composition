@@ -5,12 +5,15 @@ export default {
   components: { InputElectron },
   render (h) {
     const { data, props, $slots, listeners } = this
+
+    const attrbs = {
+      on: {...listeners},
+      props: {around: 'input-proton', ...props},
+      data: {...data},
+    }
+
     return (
-      h(InputElectron, {
-        on: {...listeners},
-        props: {around: 'input-proton', ...props},
-        data: {...data},
-      }, $slots.default)
+      h(InputElectron, attrbs, $slots.default)
     )
   }
 }

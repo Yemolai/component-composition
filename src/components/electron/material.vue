@@ -38,6 +38,7 @@ export default { MaterialInput }
 </script>
 <style>
 .material-input {
+  margin: 8px;
   border: 0.5px solid rgba(22, 22, 22, 0.1);
   box-shadow: 1px 2px 5px 0.8px rgba(22, 22, 22, 0.2);
   border-radius: 3px;
@@ -48,6 +49,8 @@ export default { MaterialInput }
   font-weight: 200;
   outline: none !important;
 }
+.material-input:active,
+.material-input:focus,
 .material-input:hover {
   outline: none !important;
 }

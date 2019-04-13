@@ -1,24 +1,31 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <material-input v-model="text"/>
-    <p>{{ text }}</p>
+    <material-input-field v-model="text"/>
+    <br/>
+    <input-atom v-model="text" :size="txtSize"/>
+    <!-- <material-input v-model="text"/> -->
+    <br/>
+    <v-text>{{ text }}</v-text>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import VText from '@/components/VText.vue'
+import InputAtom from '@/components/atom/input-atom'
+import MaterialInputField from '@/components/material-input-field.vue'
 import MaterialInput from '@/components/atom/material-input.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld,
-    MaterialInput
+    VText,
+    InputAtom,
+    MaterialInput,
+    MaterialInputField
   },
   data () {
     return {
+      txtSize: 1,
       text: 'asdasd'
     }
   }
