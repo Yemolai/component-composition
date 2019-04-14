@@ -8,8 +8,8 @@
     <br/>
     <v-text>{{ text }}</v-text>
     <br/>
-    <div v-for="(item, k) of (new Array(6))" :key="k">
-      <v-text :el="'h' + (k + 1)">{{text}}</v-text>
+    <div v-for="i in 6" :key="i">
+      <v-text :el="'h' + i">{{text}}</v-text>
     </div>
   </div>
 </template>
